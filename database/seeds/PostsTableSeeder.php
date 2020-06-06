@@ -16,5 +16,11 @@ class PostsTableSeeder extends Seeder
             'text' => 'test用の投稿だよ',
             'main_image' => '001',
         ]);
+
+        DB::table('posts')->insert([
+            'user_id' => '2',
+            'text' => 'test用の投稿2だよ',
+            'main_image' => '002',
+        ]);
     }
 }
