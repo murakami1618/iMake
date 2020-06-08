@@ -12,7 +12,7 @@
                                 <div class="form-group">
                                     <textarea required class="form-control" name="text" id="exampleFormControlTextarea1" rows=5></textarea>
                                 </div>
-                                <input type="submit" class="btn btn-outline-secondary"></input>
+                                <input type="submit" class="btn btn-outline-secondary"><input type="submit" class="btn btn-outline-secondary">
                             </form>
                         </div>
                     </div>

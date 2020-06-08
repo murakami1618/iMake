@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="card mx-auto my-3" style="width: 18rem;">
                 <div class="card-header">{{ $posts->user_name }}</div>
-                    <a href="http://localhost:8000">
+                    <a href="{{ url('/post', $posts->id) }}">
                         <img src="https://placehold.jp/150x150.png" alt="img" class="bd-placeholder-img card-img-top">
                         <div class="card-body">
                             <p class="card-text">{{$posts->text}}</p>

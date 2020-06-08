@@ -9,10 +9,13 @@ use DB;
 class PostController extends Controller
 
 {
-    public function index()
+    public function index(Request $request)
     {
-        $posts = DB::table('posts')->get();
+        $posts = DB::table('posts')->find($request->id);
+        //dd($posts);
         return view('post', ['posts' => $posts]);
     }
+
+
 
 }

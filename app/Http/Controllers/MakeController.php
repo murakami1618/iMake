@@ -18,11 +18,6 @@ class MakeController extends Controller
     }
      public function store(Request $request)
      {
-        // $make = new Make();
-        // $make -> text = $request-> text;
-        // $make ->save();
-        // $request -> text;
-        // $user = \Auth::user()->name;
         DB::table('posts')->insert(
             ['text' => $request -> text, 
             'user_name' => \Auth::user()->name,
