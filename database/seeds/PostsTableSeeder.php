@@ -12,15 +12,18 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         DB::table('posts')->insert([
-            'user_id' => '1',
+            
             'text' => 'test用の投稿だよ',
             'main_image' => '001',
+            'user_name' => '名無し',
+
         ]);
 
         DB::table('posts')->insert([
-            'user_id' => '2',
+
             'text' => 'test用の投稿2だよ',
             'main_image' => '002',
+            'user_name' => 'test',
         ]);
     }
 }

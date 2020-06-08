@@ -6,7 +6,14 @@
     </div>
 
     <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    @foreach($posts as $posts)
+        <tr>
+            <td>{{ $posts->id }}</td>
+            <td>{{ $posts->text }}</td>
+            <td>{{ $posts->main_image }}</td>
+        </tr>
+    @endforeach
+        
     </div>
 
     <div id="example-2" class="carousel slide mt-3" data-ride="carousel">

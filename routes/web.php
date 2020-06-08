@@ -20,6 +20,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/post',function(){
-    return view('post');
-});
+
+Route::get('/post','PostController@index');
+
+Route::get('/make','MakeController@index');
+
+Route::post('/make','MakeController@store');
+
+
+// Route::get('/make', function () {
+//     return view('make');
+// });
+
+
+
+
+
