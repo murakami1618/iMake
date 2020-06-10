@@ -28,5 +28,20 @@ class HomeController extends Controller
             return view('home', ['posts' => $posts]);
     }
 
+    // public function user_page(Request $request)
+    // {
+    //     $posts = DB::table('posts')->find($request->user_id);
+    //     return view('post', ['posts' => $posts]);
+    // }
+    public function user_page(Request $request)
+    {
+        //dd($request->user_name);
+        // $posts = DB::table('users')->find($request->user_name);
+        //$posts = DB::table('posts')->get();
+        $posts = DB::table('posts')->where('user_name',$request->user_name)->get();
+        // $user_name = $request->user_name
+        return view('user_page', ['posts' => $posts],['name' => $request->user_name]);
+    }
+
     
 }

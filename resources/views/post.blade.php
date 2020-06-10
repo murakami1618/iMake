@@ -1,8 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card mx-auto" style="width: 18rem;">
-    <div class="card-header">{{ $posts->user_name }}</div>
+<style type="text/css">
+a:link, a:visited, a:hover, a:active {
+  color: black;
+  text-decoration: none;
+}
+</style>
+    <div class="card mx-auto my-4" style="width: 18rem;">
+    <div class="card-header">                    
+        <a class="stretched-link" href="{{ url('/user', $posts->user_name) }}">
+            {{ $posts->user_name }}
+        </a>
+    </div>
         <img src="https://placehold.jp/100x100.png" alt="img" class="bd-placeholder-img card-img-top">
     </div>
 

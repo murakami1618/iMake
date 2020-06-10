@@ -27,6 +27,8 @@ Route::get('/make','MakeController@index');
 
 Route::post('/make','MakeController@store');
 
+Route::get('/user/{user_name}', 'HomeController@user_page');
+
 
 // Route::get('/make', function () {
 //     return view('make');
