@@ -14,13 +14,17 @@ a:link, a:visited, a:hover, a:active {
                 <div class="card-header">
                     <a href="{{ url('/user', $posts->user_name) }}">{{ $posts->user_name }}</a>
                 </div>
+                @if ($posts->main_image)
                     <a href="{{ url('/post', $posts->id) }}">
-                        <img src="https://placehold.jp/150x150.png" alt="img" class="bd-placeholder-img card-img-top">
+
+                    
+                        <img src="/storage/main_images/{{$posts->main_image}}.jpeg" alt="img" class="bd-placeholder-img card-img-top">
                         <div class="card-body">
                             <p class="card-text">{{$posts->text}}</p>
                         </div>
                         </div>
                     </a>
+                    @endif
                 </div>
             </div>
         </div>

@@ -13,14 +13,14 @@ a:link, a:visited, a:hover, a:active {
             {{ $posts->user_name }}
         </a>
     </div>
-        <img src="https://placehold.jp/100x100.png" alt="img" class="bd-placeholder-img card-img-top">
-    </div>
-
-    <div class="card-body text-center">
+        <img src="/storage/main_images/{{$posts->main_image}}.jpeg" alt="img" class="bd-placeholder-img card-img-top">
+        <div class="card-body text-left">
 
             <td>{{ $posts->text }}</td>
-            <td>{{ $posts->main_image }}</td>
     </div>
+    </div>
+
+    
 
     <div class="container text-center">
         <div id="example-2" class="carousel slide mt-3 mx-auto" data-ride="carousel">

@@ -24,7 +24,7 @@ class HomeController extends Controller
 
     public function index()
     {
-            $posts = DB::table('posts')->get();
+            $posts = DB::table('posts')->orderBy('created_at', 'desc')->get();
             return view('home', ['posts' => $posts]);
     }
 
@@ -40,6 +40,7 @@ class HomeController extends Controller
         //$posts = DB::table('posts')->get();
         $posts = DB::table('posts')->where('user_name',$request->user_name)->get();
         // $user_name = $request->user_name
+
         return view('user_page', ['posts' => $posts],['name' => $request->user_name]);
     }
 
