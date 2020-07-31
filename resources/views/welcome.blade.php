@@ -80,7 +80,6 @@
             @endif
 
             <div class="content">
-            <img alt="ロゴ" src="{{ asset('/1.jpeg') }}">
                 <div class="title m-b-md">
                     iMake!
                 </div>
